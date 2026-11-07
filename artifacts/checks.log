@@ -1,0 +1,35 @@
+
+> wearable-inspection-demo@1.0.0 typecheck
+> tsc -b --pretty false
+
+
+> wearable-inspection-demo@1.0.0 lint
+> eslint .
+
+
+> wearable-inspection-demo@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.12 /Users/mao/projects/inspection-demo
+
+
+ Test Files  3 passed (3)
+      Tests  36 passed (36)
+   Start at  00:20:34
+   Duration  1.60s (transform 315ms, setup 402ms, import 446ms, tests 555ms, environment 1.60s)
+
+
+> wearable-inspection-demo@1.0.0 build
+> tsc -b && vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 1595 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.53 kB │ gzip:  0.42 kB
+dist/assets/index-E0hPFEva.css   34.08 kB │ gzip:  8.28 kB
+dist/assets/index-CWnFm0ow.js   306.59 kB │ gzip: 93.02 kB
+✓ built in 1.61s
+found 0 vulnerabilities

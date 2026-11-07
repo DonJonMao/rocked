@@ -1,0 +1,18 @@
+
+> wearable-inspection-demo@1.0.0 demo
+> npm run build && vite preview --host 127.0.0.1 --port 5173 --strictPort
+
+
+> wearable-inspection-demo@1.0.0 build
+> tsc -b && vite build
+
+vite v6.4.5 building for production...
+transforming...
+✓ 1598 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.53 kB │ gzip:   0.42 kB
+dist/assets/index-g2gEdqhC.css   36.02 kB │ gzip:   8.67 kB
+dist/assets/index-DgsKeb9E.js   368.84 kB │ gzip: 101.80 kB
+✓ built in 826ms
+  ➜  Local:   http://127.0.0.1:5173/

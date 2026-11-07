@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "asset-a03",
+      "code": "ASSET-A03",
+      "name": "机柜 A03",
+      "location": "示例机房 1 / A 区",
+      "type": "cabinet"
+    },
+    {
+      "id": "asset-a04",
+      "code": "ASSET-A04",
+      "name": "机柜 A04",
+      "location": "示例机房 1 / A 区",
+      "type": "cabinet"
+    },
+    {
+      "id": "asset-b01",
+      "code": "ASSET-B01",
+      "name": "机柜 B01",
+      "location": "示例机房 1 / B 区",
+      "type": "cabinet"
+    }
+  ],
+  "assignees": [
+    {
+      "id": "worker-zhang",
+      "name": "张工（演示）"
+    },
+    {
+      "id": "worker-li",
+      "name": "李工（演示）"
+    }
+  ],
+  "defaultAssetId": "asset-a03",
+  "defaultAssigneeId": "worker-zhang",
+  "terminalLabel": "Glass3 眼镜界面模拟"
+}

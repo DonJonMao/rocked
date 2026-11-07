@@ -1,0 +1,167 @@
+[
+  {
+    "file": "1366-01-initial.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "pixels": {
+      "width": 1366,
+      "height": 1225
+    }
+  },
+  {
+    "file": "1366-02-missing-reading.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "pixels": {
+      "width": 1366,
+      "height": 1225
+    }
+  },
+  {
+    "file": "1366-03-running.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "pixels": {
+      "width": 1366,
+      "height": 1225
+    }
+  },
+  {
+    "file": "1366-04-paused-restored.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "pixels": {
+      "width": 1366,
+      "height": 1225
+    }
+  },
+  {
+    "file": "1366-05-completed-report.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "pixels": {
+      "width": 1366,
+      "height": 4129
+    }
+  },
+  {
+    "file": "1440-01-initial.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pixels": {
+      "width": 1440,
+      "height": 1243
+    }
+  },
+  {
+    "file": "1440-02-missing-reading.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pixels": {
+      "width": 1440,
+      "height": 1243
+    }
+  },
+  {
+    "file": "1440-03-running.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pixels": {
+      "width": 1440,
+      "height": 1243
+    }
+  },
+  {
+    "file": "1440-04-paused-restored.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pixels": {
+      "width": 1440,
+      "height": 1243
+    }
+  },
+  {
+    "file": "1440-05-completed-report.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "pixels": {
+      "width": 1440,
+      "height": 4129
+    }
+  },
+  {
+    "file": "1920-01-initial.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "pixels": {
+      "width": 1920,
+      "height": 1259
+    }
+  },
+  {
+    "file": "1920-02-missing-reading.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "pixels": {
+      "width": 1920,
+      "height": 1259
+    }
+  },
+  {
+    "file": "1920-03-running.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "pixels": {
+      "width": 1920,
+      "height": 1259
+    }
+  },
+  {
+    "file": "1920-04-paused-restored.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "pixels": {
+      "width": 1920,
+      "height": 1259
+    }
+  },
+  {
+    "file": "1920-05-completed-report.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "pixels": {
+      "width": 1920,
+      "height": 4129
+    }
+  }
+]

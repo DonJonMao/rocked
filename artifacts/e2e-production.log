@@ -1,0 +1,30 @@
+
+> wearable-inspection-demo@1.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:83125) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:83130) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 15 tests using 1 worker
+
+(node:83133) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/e2e/inspection.spec.ts:76:3 › 完整流程、异常、暂停恢复与报告 1366×768 (2.9s)
+  ✓   2 [chromium] › tests/e2e/inspection.spec.ts:76:3 › 完整流程、异常、暂停恢复与报告 1440×900 (3.0s)
+  ✓   3 [chromium] › tests/e2e/inspection.spec.ts:76:3 › 完整流程、异常、暂停恢复与报告 1920×1080 (3.2s)
+  ✓   4 [chromium] › tests/e2e/inspection.spec.ts:133:1 › 校验资产、结果和异常说明，删除照片重新阻断，键盘不能跳步 (1.5s)
+  ✓   5 [chromium] › tests/e2e/inspection.spec.ts:183:1 › 上传三种图片、拒绝错误格式/损坏/超限文件，刷新后 Blob 图片可见 (2.3s)
+  ✓   6 [chromium] › tests/e2e/inspection.spec.ts:217:1 › 摄像头拒绝权限后保留替代入口，不重复请求权限 (994ms)
+  ✓   7 [chromium] › tests/e2e/inspection.spec.ts:235:1 › 照片及步骤写入失败不推进，重试后原子保存 (1.2s)
+  ✓   8 [chromium] › tests/e2e/inspection.spec.ts:279:1 › 关闭采集后迟到图片不写入新步骤，迟到相机授权释放 tracks (1.2s)
+  ✓   9 [chromium] › tests/e2e/inspection.spec.ts:325:1 › 模拟摄像头拍照成功，保存后停止所有 tracks (967ms)
+  ✓  10 [chromium] › tests/e2e/inspection.spec.ts:354:1 › 模板快照、内部顺序与通用新增检查项，新任务执行新版本 (3.6s)
+  ✓  11 [chromium] › tests/e2e/inspection.spec.ts:406:1 › 报告 JSON、打印、历史只读和多任务隔离 (3.4s)
+  ✓  12 [chromium] › tests/e2e/inspection.spec.ts:462:1 › 重置取消保留数据，连续三轮重置不残留任务图片和事件 (2.5s)
+  ✓  13 [chromium] › tests/e2e/inspection.spec.ts:488:1 › 首末固定步骤的照片与结果要求也由配置驱动 (2.5s)
+  ✓  14 [chromium] › tests/e2e/inspection.spec.ts:523:1 › 非默认设备和人员下发后刷新，管理区与眼镜保持同一快照 (602ms)
+  ✓  15 [chromium] › tests/e2e/inspection.spec.ts:545:1 › 原生双击不会越过连续无必填资料的检查项 (1.1s)
+
+  15 passed (37.1s)

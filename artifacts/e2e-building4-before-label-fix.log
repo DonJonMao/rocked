@@ -1,0 +1,125 @@
+
+> wearable-inspection-demo@1.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:54457) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 31 tests using 1 worker
+
+(node:54459) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   1 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：西柴发与日用油箱巡检 (45.1s)
+(node:54528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：并机室巡检 (45.1s)
+(node:54602) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：油库区巡检 (18.7s)
+
+
+  1) [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：西柴发与日用油箱巡检 ────────────────────────────────
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for getByLabel('巡检模板', { exact: true })
+
+
+      16 | async function choose(page: Page, template: Template) {
+      17 |   await page.goto('/');
+    > 18 |   await page.getByLabel('巡检模板', { exact: true }).selectOption(template.id);
+         |                                                  ^
+      19 |   await page.getByLabel('目标设备', { exact: true }).selectOption(template.assetIds![0]);
+      20 |   await page.getByLabel('巡检日期', { exact: true }).fill('2026-11-03');
+      21 |   await page.getByLabel('巡检时段', { exact: true }).selectOption(template.timeSlots![0]);
+        at choose (/Users/mao/projects/inspection-demo/tests/e2e/catalog.spec.ts:18:50)
+        at /Users/mao/projects/inspection-demo/tests/e2e/catalog.spec.ts:50:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/catalog-原表全流程：西柴发与日用油箱巡检-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/catalog-原表全流程：西柴发与日用油箱巡检-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/catalog-原表全流程：西柴发与日用油箱巡检-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/catalog-原表全流程：西柴发与日用油箱巡检-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：并机室巡检 ─────────────────────────────────────
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for getByLabel('巡检模板', { exact: true })
+
+
+      16 | async function choose(page: Page, template: Template) {
+      17 |   await page.goto('/');
+    > 18 |   await page.getByLabel('巡检模板', { exact: true }).selectOption(template.id);
+         |                                                  ^
+      19 |   await page.getByLabel('目标设备', { exact: true }).selectOption(template.assetIds![0]);
+      20 |   await page.getByLabel('巡检日期', { exact: true }).fill('2026-11-03');
+      21 |   await page.getByLabel('巡检时段', { exact: true }).selectOption(template.timeSlots![0]);
+        at choose (/Users/mao/projects/inspection-demo/tests/e2e/catalog.spec.ts:18:50)
+        at /Users/mao/projects/inspection-demo/tests/e2e/catalog.spec.ts:50:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/catalog-原表全流程：并机室巡检-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/catalog-原表全流程：并机室巡检-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/catalog-原表全流程：并机室巡检-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/catalog-原表全流程：并机室巡检-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：油库区巡检 ─────────────────────────────────────
+
+    Test was interrupted.
+
+    Error: locator.selectOption: Test ended.
+    Call log:
+      - waiting for getByLabel('巡检模板', { exact: true })
+
+
+      16 | async function choose(page: Page, template: Template) {
+      17 |   await page.goto('/');
+    > 18 |   await page.getByLabel('巡检模板', { exact: true }).selectOption(template.id);
+         |                                                  ^
+      19 |   await page.getByLabel('目标设备', { exact: true }).selectOption(template.assetIds![0]);
+      20 |   await page.getByLabel('巡检日期', { exact: true }).fill('2026-11-03');
+      21 |   await page.getByLabel('巡检时段', { exact: true }).selectOption(template.timeSlots![0]);
+        at choose (/Users/mao/projects/inspection-demo/tests/e2e/catalog.spec.ts:18:50)
+        at /Users/mao/projects/inspection-demo/tests/e2e/catalog.spec.ts:50:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/catalog-原表全流程：油库区巡检-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/catalog-原表全流程：油库区巡检-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/catalog-原表全流程：油库区巡检-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/catalog-原表全流程：油库区巡检-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：西柴发与日用油箱巡检 ─────────────────────────────────
+    [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：并机室巡检 ──────────────────────────────────────
+  1 interrupted
+    [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：油库区巡检 ──────────────────────────────────────
+  28 did not run

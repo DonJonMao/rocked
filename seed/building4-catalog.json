@@ -1,0 +1,2942 @@
+{
+  "templates": [
+    {
+      "id": "diesel",
+      "name": "西柴发与日用油箱巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "2号动力中心西柴发；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 1,
+        "section": "2号动力中心西柴发"
+      },
+      "assetIds": [
+        "diesel-west"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-01",
+          "type": "photo_check",
+          "title": "油机 · 控制方式",
+          "instruction": "控制方式应为自动；仅检查并记录，不操作切换。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "自动"
+            }
+          ]
+        },
+        {
+          "id": "diesel-02",
+          "type": "photo_check",
+          "title": "油机 · 控制面板",
+          "instruction": "控制面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-03",
+          "type": "photo_check",
+          "title": "油机 · 管道渗漏",
+          "instruction": "油机和供油管道无渗油、漏水。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-04",
+          "type": "photo_check",
+          "title": "油机 · 水套加热器温度",
+          "instruction": "水套加热器温度应为35–45℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "水套加热器温度",
+              "kind": "number",
+              "unit": "℃",
+              "min": 35,
+              "max": 45
+            }
+          ]
+        },
+        {
+          "id": "diesel-05",
+          "type": "photo_check",
+          "title": "油机 · 启动电池",
+          "instruction": "启动电池无膨胀、漏液现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-06",
+          "type": "photo_check",
+          "title": "日用油箱 · 液位",
+          "instruction": "原表标准：50–80 mm，按原单位记录。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "日用油箱液位",
+              "kind": "number",
+              "unit": "mm",
+              "min": 50,
+              "max": 80
+            }
+          ]
+        },
+        {
+          "id": "diesel-07",
+          "type": "photo_check",
+          "title": "日用油箱 · 渗油",
+          "instruction": "油箱及管道无渗油现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-08",
+          "type": "photo_check",
+          "title": "日用油箱 · 安全设施",
+          "instruction": "通风、防爆灯、消防沙完好。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-09",
+          "type": "photo_check",
+          "title": "供油和百叶控制柜 · 控制方式",
+          "instruction": "控制方式应为自动；仅记录。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "自动"
+            }
+          ]
+        },
+        {
+          "id": "diesel-10",
+          "type": "photo_check",
+          "title": "供油和百叶控制柜 · 告警",
+          "instruction": "控制面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "diesel-11",
+          "type": "photo_check",
+          "title": "供油和百叶控制柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "parallel",
+      "name": "并机室巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "2号动力中心并机室；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 1,
+        "section": "2号动力中心并机室"
+      },
+      "assetIds": [
+        "parallel-room"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-01",
+          "type": "photo_check",
+          "title": "并机高压柜 · 控制方式",
+          "instruction": "控制方式应为自动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "自动"
+            }
+          ]
+        },
+        {
+          "id": "parallel-02",
+          "type": "photo_check",
+          "title": "并机高压柜 · 继电保护",
+          "instruction": "继电保护无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-03",
+          "type": "photo_check",
+          "title": "并机高压柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-04",
+          "type": "photo_check",
+          "title": "并机控制柜 · 面板保护",
+          "instruction": "面板保护无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-05",
+          "type": "photo_check",
+          "title": "并机控制柜 · 控制方式",
+          "instruction": "控制方式应为自动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "自动"
+            }
+          ]
+        },
+        {
+          "id": "parallel-06",
+          "type": "photo_check",
+          "title": "并机控制柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-07",
+          "type": "photo_check",
+          "title": "UPS · 面板告警",
+          "instruction": "UPS面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-08",
+          "type": "photo_check",
+          "title": "UPS · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-09",
+          "type": "photo_check",
+          "title": "UPS · 运行模式",
+          "instruction": "运行模式正常，按现场状态人工确认。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-10",
+          "type": "photo_check",
+          "title": "直流屏 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "parallel-11",
+          "type": "photo_check",
+          "title": "直流屏 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "oil",
+      "name": "油库区巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "1号油库区；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 1,
+        "section": "1号油库区"
+      },
+      "assetIds": [
+        "oil-depot-1"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "oil-01",
+          "type": "photo_check",
+          "title": "油库环境",
+          "instruction": "盖板完好、无积水，周边无可燃物。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "oil-02",
+          "type": "photo_check",
+          "title": "油罐人井 · 渗漏腐蚀",
+          "instruction": "油罐、阀门、管路无渗漏、腐蚀。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "oil-03",
+          "type": "photo_check",
+          "title": "油罐人井 · 检测告警",
+          "instruction": "可燃气体、渗漏、液位检测无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "oil-04",
+          "type": "photo_check",
+          "title": "油罐人井 · 环境",
+          "instruction": "无积水、无可燃物。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "oil-05",
+          "type": "photo_check",
+          "title": "供油配电柜 · 控制方式",
+          "instruction": "控制方式应为自动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "自动"
+            }
+          ]
+        },
+        {
+          "id": "oil-06",
+          "type": "photo_check",
+          "title": "供油配电柜 · 面板告警",
+          "instruction": "控制面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "oil-07",
+          "type": "photo_check",
+          "title": "供油配电柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "distribution",
+      "name": "1层配电室巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "1层配电室；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 2,
+        "section": "1层配电室"
+      },
+      "assetIds": [
+        "room-101",
+        "room-102",
+        "room-103",
+        "room-104"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-01",
+          "type": "photo_check",
+          "title": "环境 · 温度",
+          "instruction": "环境温度应为25–30℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "环境温度",
+              "kind": "number",
+              "unit": "℃",
+              "min": 25,
+              "max": 30
+            }
+          ]
+        },
+        {
+          "id": "distribution-02",
+          "type": "photo_check",
+          "title": "环境 · 渗漏水",
+          "instruction": "无渗水、漏水现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-03",
+          "type": "photo_check",
+          "title": "高压柜 · 继电保护",
+          "instruction": "继电保护无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-04",
+          "type": "photo_check",
+          "title": "高压柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-05",
+          "type": "photo_check",
+          "title": "高压柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-06",
+          "type": "photo_check",
+          "title": "高压柜 · 控制方式",
+          "instruction": "控制方式应为手动；仅检查，不操作切换。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "手动"
+            }
+          ]
+        },
+        {
+          "id": "distribution-07",
+          "type": "photo_check",
+          "title": "高压柜 · 带电显示",
+          "instruction": "带电显示常亮。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-08",
+          "type": "photo_check",
+          "title": "变压器 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-09",
+          "type": "photo_check",
+          "title": "变压器 · 铁芯温度",
+          "instruction": "铁芯温度在正常范围；原表未给出数值范围，由现场规程人工确认。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "铁芯温度",
+              "kind": "number",
+              "unit": "℃"
+            }
+          ]
+        },
+        {
+          "id": "distribution-10",
+          "type": "photo_check",
+          "title": "变压器 · 风机控制箱",
+          "instruction": "风机控制箱无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-11",
+          "type": "photo_check",
+          "title": "低压柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-12",
+          "type": "photo_check",
+          "title": "低压柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-13",
+          "type": "photo_check",
+          "title": "低压柜 · 控制方式",
+          "instruction": "控制方式应为手动；仅检查，不操作切换。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "手动"
+            }
+          ]
+        },
+        {
+          "id": "distribution-14",
+          "type": "photo_check",
+          "title": "直流屏 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "distribution-15",
+          "type": "photo_check",
+          "title": "直流屏 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "battery-2",
+      "name": "2层电池室巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "2层电池室；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 3,
+        "section": "2层电池室"
+      },
+      "assetIds": [
+        "room-201",
+        "room-202",
+        "room-203",
+        "room-204"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-01",
+          "type": "photo_check",
+          "title": "环境 · 温度",
+          "instruction": "环境温度应为23–28℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "环境温度",
+              "kind": "number",
+              "unit": "℃",
+              "min": 23,
+              "max": 28
+            }
+          ]
+        },
+        {
+          "id": "battery-2-02",
+          "type": "photo_check",
+          "title": "环境 · 渗漏水",
+          "instruction": "无渗水、漏水现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-03",
+          "type": "photo_check",
+          "title": "低压柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-04",
+          "type": "photo_check",
+          "title": "低压柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-05",
+          "type": "photo_check",
+          "title": "低压柜 · 控制方式",
+          "instruction": "控制方式应为手动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "手动"
+            }
+          ]
+        },
+        {
+          "id": "battery-2-06",
+          "type": "photo_check",
+          "title": "UPS · 告警",
+          "instruction": "UPS无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-07",
+          "type": "photo_check",
+          "title": "UPS · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-08",
+          "type": "photo_check",
+          "title": "UPS · 运行模式",
+          "instruction": "运行模式正常，按现场状态人工确认。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-09",
+          "type": "photo_check",
+          "title": "UPS · 负载率",
+          "instruction": "原表标准：负载率在40%以下；此处按不超过40%校验。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "UPS负载率",
+              "kind": "number",
+              "unit": "%",
+              "max": 40
+            }
+          ]
+        },
+        {
+          "id": "battery-2-10",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 面板告警",
+          "instruction": "面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-11",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-12",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-13",
+          "type": "photo_check",
+          "title": "电池组 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-2-14",
+          "type": "photo_check",
+          "title": "电池组 · 膨胀漏液",
+          "instruction": "电池无膨胀、漏液现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "battery-3",
+      "name": "3层电池室巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "3层电池室；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 4,
+        "section": "3层电池室"
+      },
+      "assetIds": [
+        "room-301",
+        "room-302",
+        "room-303",
+        "room-304"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-01",
+          "type": "photo_check",
+          "title": "环境 · 温度",
+          "instruction": "环境温度应为23–28℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "环境温度",
+              "kind": "number",
+              "unit": "℃",
+              "min": 23,
+              "max": 28
+            }
+          ]
+        },
+        {
+          "id": "battery-3-02",
+          "type": "photo_check",
+          "title": "环境 · 渗漏水",
+          "instruction": "无渗水、漏水现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-03",
+          "type": "photo_check",
+          "title": "低压柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-04",
+          "type": "photo_check",
+          "title": "低压柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-05",
+          "type": "photo_check",
+          "title": "低压柜 · 控制方式",
+          "instruction": "控制方式应为手动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "手动"
+            }
+          ]
+        },
+        {
+          "id": "battery-3-06",
+          "type": "photo_check",
+          "title": "UPS · 告警",
+          "instruction": "UPS无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-07",
+          "type": "photo_check",
+          "title": "UPS · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-08",
+          "type": "photo_check",
+          "title": "UPS · 运行模式",
+          "instruction": "运行模式正常，按现场状态人工确认。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-09",
+          "type": "photo_check",
+          "title": "UPS · 负载率",
+          "instruction": "原表标准：负载率在40%以下；此处按不超过40%校验。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "UPS负载率",
+              "kind": "number",
+              "unit": "%",
+              "max": 40
+            }
+          ]
+        },
+        {
+          "id": "battery-3-10",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 面板告警",
+          "instruction": "面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-11",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-12",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-13",
+          "type": "photo_check",
+          "title": "电池组 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-3-14",
+          "type": "photo_check",
+          "title": "电池组 · 膨胀漏液",
+          "instruction": "电池无膨胀、漏液现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "battery-4",
+      "name": "4层电池室巡检",
+      "version": 1,
+      "category": "电气",
+      "description": "4层电池室；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼电气巡检表2024.6.1(1).pdf",
+        "page": 5,
+        "section": "4层电池室"
+      },
+      "assetIds": [
+        "room-401",
+        "room-402",
+        "room-403",
+        "room-404"
+      ],
+      "timeSlots": [
+        "10:00",
+        "16:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-01",
+          "type": "photo_check",
+          "title": "环境 · 温度",
+          "instruction": "环境温度应为23–28℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "环境温度",
+              "kind": "number",
+              "unit": "℃",
+              "min": 23,
+              "max": 28
+            }
+          ]
+        },
+        {
+          "id": "battery-4-02",
+          "type": "photo_check",
+          "title": "环境 · 渗漏水",
+          "instruction": "无渗水、漏水现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-03",
+          "type": "photo_check",
+          "title": "低压柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-04",
+          "type": "photo_check",
+          "title": "低压柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-05",
+          "type": "photo_check",
+          "title": "低压柜 · 控制方式",
+          "instruction": "控制方式应为手动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "手动"
+            }
+          ]
+        },
+        {
+          "id": "battery-4-06",
+          "type": "photo_check",
+          "title": "UPS · 告警",
+          "instruction": "UPS无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-07",
+          "type": "photo_check",
+          "title": "UPS · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-08",
+          "type": "photo_check",
+          "title": "UPS · 运行模式",
+          "instruction": "运行模式正常，按现场状态人工确认。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-09",
+          "type": "photo_check",
+          "title": "UPS · 负载率",
+          "instruction": "原表标准：负载率在40%以下；此处按不超过40%校验。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "UPS负载率",
+              "kind": "number",
+              "unit": "%",
+              "max": 40
+            }
+          ]
+        },
+        {
+          "id": "battery-4-10",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 面板告警",
+          "instruction": "面板无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-11",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-12",
+          "type": "photo_check",
+          "title": "UPS输出柜 · 仪表与指示灯",
+          "instruction": "仪表、指示灯显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-13",
+          "type": "photo_check",
+          "title": "电池组 · 异响异味",
+          "instruction": "无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "battery-4-14",
+          "type": "photo_check",
+          "title": "电池组 · 膨胀漏液",
+          "instruction": "电池无膨胀、漏液现象。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "chiller",
+      "name": "冷水机组巡检",
+      "version": 1,
+      "category": "暖通",
+      "description": "冷水机组；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼暖通巡检表2024.6.1.pdf",
+        "page": 1,
+        "section": "冷水机组"
+      },
+      "assetIds": [
+        "chiller-1",
+        "chiller-2",
+        "chiller-3"
+      ],
+      "timeSlots": [
+        "09:30",
+        "14:00",
+        "20:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "chiller-01",
+          "type": "photo_check",
+          "title": "冷机 · 异响异味",
+          "instruction": "检查有无异响、异味；无异常选择正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "chiller-02",
+          "type": "photo_check",
+          "title": "冷机 · 屏幕报警",
+          "instruction": "检查冷机屏幕有无报警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "chiller-03",
+          "type": "photo_check",
+          "title": "冷机 · 冷凝压力",
+          "instruction": "冷凝压力应小于958 kPa。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷凝压力",
+              "kind": "number",
+              "unit": "kPa",
+              "max": 958,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "chiller-04",
+          "type": "photo_check",
+          "title": "冷机 · 蒸发压力",
+          "instruction": "蒸发压力应大于226 kPa。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "蒸发压力",
+              "kind": "number",
+              "unit": "kPa",
+              "min": 226,
+              "minExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "chiller-05",
+          "type": "photo_check",
+          "title": "冷机 · 油槽温度",
+          "instruction": "油槽温度应小于60℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "油槽温度",
+              "kind": "number",
+              "unit": "℃",
+              "max": 60,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "chiller-06",
+          "type": "photo_check",
+          "title": "冷机 · 负荷",
+          "instruction": "冷机负荷应小于95%。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷机负荷",
+              "kind": "number",
+              "unit": "%",
+              "max": 95,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "chiller-07",
+          "type": "photo_check",
+          "title": "冷冻水 · 供回水温度",
+          "instruction": "分别记录供水、回水温度；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "供水温度",
+              "kind": "number",
+              "unit": "℃"
+            },
+            {
+              "id": "value-2",
+              "label": "回水温度",
+              "kind": "number",
+              "unit": "℃"
+            }
+          ]
+        },
+        {
+          "id": "chiller-08",
+          "type": "photo_check",
+          "title": "冷凝器 · 小温差",
+          "instruction": "冷凝器小温差应小于3℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷凝器小温差",
+              "kind": "number",
+              "unit": "℃",
+              "max": 3,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "chiller-09",
+          "type": "photo_check",
+          "title": "蒸发器 · 小温差",
+          "instruction": "蒸发器小温差应小于2℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "蒸发器小温差",
+              "kind": "number",
+              "unit": "℃",
+              "max": 2,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "tower",
+      "name": "冷却塔巡检",
+      "version": 1,
+      "category": "暖通",
+      "description": "冷却塔；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼暖通巡检表2024.6.1.pdf",
+        "page": 2,
+        "section": "冷却塔"
+      },
+      "assetIds": [
+        "tower-1",
+        "tower-2",
+        "tower-3"
+      ],
+      "timeSlots": [
+        "09:30",
+        "14:00",
+        "20:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "tower-01",
+          "type": "photo_check",
+          "title": "冷塔 · 异响异味",
+          "instruction": "检查有无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "tower-02",
+          "type": "photo_check",
+          "title": "冷塔 · 变频器告警",
+          "instruction": "检查变频器有无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "tower-03",
+          "type": "photo_check",
+          "title": "冷塔 · 功率",
+          "instruction": "记录功率；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "功率",
+              "kind": "number",
+              "unit": "kW"
+            }
+          ]
+        },
+        {
+          "id": "tower-04",
+          "type": "photo_check",
+          "title": "1#风机 · 频率与电流",
+          "instruction": "分别记录该风机频率、电流；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "频率",
+              "kind": "number",
+              "unit": "Hz"
+            },
+            {
+              "id": "value-2",
+              "label": "电流",
+              "kind": "number",
+              "unit": "A"
+            }
+          ]
+        },
+        {
+          "id": "tower-05",
+          "type": "photo_check",
+          "title": "2#风机 · 频率与电流",
+          "instruction": "分别记录该风机频率、电流；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "频率",
+              "kind": "number",
+              "unit": "Hz"
+            },
+            {
+              "id": "value-2",
+              "label": "电流",
+              "kind": "number",
+              "unit": "A"
+            }
+          ]
+        },
+        {
+          "id": "tower-06",
+          "type": "photo_check",
+          "title": "3#风机 · 频率与电流",
+          "instruction": "分别记录该风机频率、电流；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "频率",
+              "kind": "number",
+              "unit": "Hz"
+            },
+            {
+              "id": "value-2",
+              "label": "电流",
+              "kind": "number",
+              "unit": "A"
+            }
+          ]
+        },
+        {
+          "id": "tower-07",
+          "type": "photo_check",
+          "title": "冷塔 · 集水盘水位",
+          "instruction": "无溢流，出水无漩涡。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "tower-08",
+          "type": "photo_check",
+          "title": "冷塔 · 运行模式",
+          "instruction": "记录实际运行模式。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "运行模式",
+              "kind": "select",
+              "options": [
+                "电制冷",
+                "半自由",
+                "全自由",
+                "低负荷"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tower-09",
+          "type": "photo_check",
+          "title": "冷塔 · 湿球温度",
+          "instruction": "记录湿球温度；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "湿球温度",
+              "kind": "number",
+              "unit": "℃"
+            }
+          ]
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "pump",
+      "name": "循环泵巡检",
+      "version": 1,
+      "category": "暖通",
+      "description": "循环泵；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼暖通巡检表2024.6.1.pdf",
+        "page": 3,
+        "section": "循环泵"
+      },
+      "assetIds": [
+        "pump-1",
+        "pump-2",
+        "pump-3"
+      ],
+      "timeSlots": [
+        "09:30",
+        "14:00",
+        "21:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "pump-01",
+          "type": "photo_check",
+          "title": "循环泵 · 异响异味",
+          "instruction": "检查有无异响、异味。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "pump-02",
+          "type": "photo_check",
+          "title": "循环泵 · 变频器告警",
+          "instruction": "检查变频器有无告警。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "pump-03",
+          "type": "photo_check",
+          "title": "循环泵 · 系统渗漏",
+          "instruction": "检查系统有无跑冒滴漏。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "pump-04",
+          "type": "photo_check",
+          "title": "循环泵 · 功率",
+          "instruction": "原表为成对读数，分别记录冷冻泵和冷却泵。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷冻泵功率",
+              "kind": "number",
+              "unit": "kW"
+            },
+            {
+              "id": "value-2",
+              "label": "冷却泵功率",
+              "kind": "number",
+              "unit": "kW"
+            }
+          ]
+        },
+        {
+          "id": "pump-05",
+          "type": "photo_check",
+          "title": "循环泵 · 频率",
+          "instruction": "原表为成对读数，分别记录冷冻泵和冷却泵。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷冻泵频率",
+              "kind": "number",
+              "unit": "Hz"
+            },
+            {
+              "id": "value-2",
+              "label": "冷却泵频率",
+              "kind": "number",
+              "unit": "Hz"
+            }
+          ]
+        },
+        {
+          "id": "pump-06",
+          "type": "photo_check",
+          "title": "循环泵 · 电流",
+          "instruction": "原表为成对读数，分别记录冷冻泵和冷却泵。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷冻泵电流",
+              "kind": "number",
+              "unit": "A"
+            },
+            {
+              "id": "value-2",
+              "label": "冷却泵电流",
+              "kind": "number",
+              "unit": "A"
+            }
+          ]
+        },
+        {
+          "id": "pump-07",
+          "type": "photo_check",
+          "title": "循环泵 · Y滤压力",
+          "instruction": "水泵进口Y滤上下压力显示一致。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "pump-08",
+          "type": "photo_check",
+          "title": "循环泵 · 出口压力",
+          "instruction": "水泵出口压力应满足0.38 < 压力 < 0.6 MPa。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "水泵出口压力",
+              "kind": "number",
+              "unit": "MPa",
+              "min": 0.38,
+              "max": 0.6,
+              "minExclusive": true,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "pump-09",
+          "type": "photo_check",
+          "title": "循环泵 · 振动",
+          "instruction": "水泵振动应小于4.5 mm/s。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "水泵振动",
+              "kind": "number",
+              "unit": "mm/s",
+              "max": 4.5,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "pump-10",
+          "type": "photo_check",
+          "title": "循环泵 · 轴承温度",
+          "instruction": "轴承温度应小于70℃。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "轴承温度",
+              "kind": "number",
+              "unit": "℃",
+              "max": 70,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "auxiliary",
+      "name": "冷源辅助设施巡检",
+      "version": 1,
+      "category": "暖通",
+      "description": "冷源辅助设施；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼暖通巡检表2024.6.1.pdf",
+        "page": 4,
+        "section": "冷源辅助设施"
+      },
+      "assetIds": [
+        "auxiliary-system"
+      ],
+      "timeSlots": [
+        "09:30",
+        "14:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "auxiliary-01",
+          "type": "photo_check",
+          "title": "冷冻水定压装置压力",
+          "instruction": "记录装置压力；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷冻水定压装置压力",
+              "kind": "number",
+              "unit": "bar"
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-02",
+          "type": "photo_check",
+          "title": "加湿补水装置压力",
+          "instruction": "记录装置压力；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "加湿补水装置压力",
+              "kind": "number",
+              "unit": "bar"
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-03",
+          "type": "photo_check",
+          "title": "冷却水定压装置压力",
+          "instruction": "记录装置压力；原表未给出阈值。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "冷却水定压装置压力",
+              "kind": "number",
+              "unit": "bar"
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-04",
+          "type": "photo_check",
+          "title": "加药装置",
+          "instruction": "运行正常，药量充足。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "auxiliary-05",
+          "type": "photo_check",
+          "title": "软化水装置",
+          "instruction": "运行正常，盐量充足。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "auxiliary-06",
+          "type": "photo_check",
+          "title": "定压系统",
+          "instruction": "定压系统在自动状态。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "控制方式",
+              "kind": "select",
+              "options": [
+                "自动",
+                "手动"
+              ],
+              "expected": "自动"
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-07",
+          "type": "photo_check",
+          "title": "软水箱液位",
+          "instruction": "软水箱液位应不小于1.5 m。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "软水箱液位",
+              "kind": "number",
+              "unit": "m",
+              "min": 1.5
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-08",
+          "type": "photo_check",
+          "title": "蓄水池液位",
+          "instruction": "蓄水池液位应不小于4 m。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "蓄水池液位",
+              "kind": "number",
+              "unit": "m",
+              "min": 4
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-09",
+          "type": "photo_check",
+          "title": "蓄冷罐液位",
+          "instruction": "原表标准：蓄冷罐液位应不小于24 m，按原值记录。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "蓄冷罐液位",
+              "kind": "number",
+              "unit": "m",
+              "min": 24
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-10",
+          "type": "photo_check",
+          "title": "水质 · pH",
+          "instruction": "pH值在7至9.5之间。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "pH",
+              "kind": "number",
+              "unit": "",
+              "min": 7,
+              "max": 9.5
+            }
+          ]
+        },
+        {
+          "id": "auxiliary-11",
+          "type": "photo_check",
+          "title": "水质 · 电导率",
+          "instruction": "电导率应小于2000 μS/cm。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "电导率",
+              "kind": "number",
+              "unit": "μS/cm",
+              "max": 2000,
+              "maxExclusive": true
+            }
+          ]
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "ahu",
+      "name": "AHU巡检",
+      "version": 1,
+      "category": "暖通",
+      "description": "4号楼AHU；一次任务对应一个巡检对象、一个时段。",
+      "source": {
+        "file": "4号楼暖通巡检表2024.6.1.pdf",
+        "page": 5,
+        "section": "4号楼AHU"
+      },
+      "assetIds": [
+        "ahu-system"
+      ],
+      "timeSlots": [
+        "09:30",
+        "14:00",
+        "22:00",
+        "03:00"
+      ],
+      "steps": [
+        {
+          "id": "verify-asset",
+          "type": "asset_check",
+          "title": "确认巡检设备",
+          "instruction": "核对本次区域或设备、巡检日期与时段。资产码为本地演示编号。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-01",
+          "type": "photo_check",
+          "title": "运行 · 控制屏",
+          "instruction": "控制屏显示正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-02",
+          "type": "photo_check",
+          "title": "运行 · 运行模式",
+          "instruction": "记录现场运行模式；原表未列出模式选项。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          },
+          "fields": [
+            {
+              "id": "value-1",
+              "label": "运行模式",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "ahu-03",
+          "type": "photo_check",
+          "title": "运行 · 运行状态",
+          "instruction": "运行状态正常。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-04",
+          "type": "photo_check",
+          "title": "外观 · 柜门",
+          "instruction": "电源柜门、风仓柜门关闭。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-05",
+          "type": "photo_check",
+          "title": "外观 · 进风纱窗",
+          "instruction": "进风纱窗完整。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-06",
+          "type": "photo_check",
+          "title": "外观 · 异常振动",
+          "instruction": "检查有无异常振动。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-07",
+          "type": "photo_check",
+          "title": "电系统 · 三路电源",
+          "instruction": "检查3路电源供电状态，异常时在备注中指明电源路数。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-08",
+          "type": "photo_check",
+          "title": "电系统 · 控制开关",
+          "instruction": "控制开关在合闸状态；仅检查，不执行操作。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-09",
+          "type": "photo_check",
+          "title": "水系统 · 渗漏",
+          "instruction": "检查水系统是否有渗漏。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "ahu-10",
+          "type": "photo_check",
+          "title": "水系统 · 手动补水阀",
+          "instruction": "手动补水阀关闭；仅检查，不执行操作。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": true,
+            "abnormalNoteRequired": true,
+            "confirmationRequired": true
+          }
+        },
+        {
+          "id": "submit-report",
+          "type": "review_submit",
+          "title": "提交巡检记录",
+          "instruction": "核对本次全部检查结果、读数及异常说明，确认后提交归档。",
+          "requirements": {
+            "minPhotos": 0,
+            "resultRequired": false,
+            "abnormalNoteRequired": false,
+            "confirmationRequired": true
+          }
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "diesel-west",
+      "code": "B4-DIESEL-WEST",
+      "name": "2号动力中心西柴发",
+      "location": "2号动力中心西柴发区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "parallel-room",
+      "code": "B4-PARALLEL-ROOM",
+      "name": "2号动力中心并机室",
+      "location": "2号动力中心",
+      "type": "inspection-target"
+    },
+    {
+      "id": "oil-depot-1",
+      "code": "B4-OIL-DEPOT-1",
+      "name": "1号油库区",
+      "location": "1号油库区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-101",
+      "code": "B4-ROOM-101",
+      "name": "101配电室",
+      "location": "西咸4号楼 / 1层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-102",
+      "code": "B4-ROOM-102",
+      "name": "102配电室",
+      "location": "西咸4号楼 / 1层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-103",
+      "code": "B4-ROOM-103",
+      "name": "103配电室",
+      "location": "西咸4号楼 / 1层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-104",
+      "code": "B4-ROOM-104",
+      "name": "104配电室",
+      "location": "西咸4号楼 / 1层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-201",
+      "code": "B4-ROOM-201",
+      "name": "201电池室",
+      "location": "西咸4号楼 / 2层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-202",
+      "code": "B4-ROOM-202",
+      "name": "202电池室",
+      "location": "西咸4号楼 / 2层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-203",
+      "code": "B4-ROOM-203",
+      "name": "203电池室",
+      "location": "西咸4号楼 / 2层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-204",
+      "code": "B4-ROOM-204",
+      "name": "204电池室",
+      "location": "西咸4号楼 / 2层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-301",
+      "code": "B4-ROOM-301",
+      "name": "301电池室",
+      "location": "西咸4号楼 / 3层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-302",
+      "code": "B4-ROOM-302",
+      "name": "302电池室",
+      "location": "西咸4号楼 / 3层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-303",
+      "code": "B4-ROOM-303",
+      "name": "303电池室",
+      "location": "西咸4号楼 / 3层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-304",
+      "code": "B4-ROOM-304",
+      "name": "304电池室",
+      "location": "西咸4号楼 / 3层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-401",
+      "code": "B4-ROOM-401",
+      "name": "401电池室",
+      "location": "西咸4号楼 / 4层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-402",
+      "code": "B4-ROOM-402",
+      "name": "402电池室",
+      "location": "西咸4号楼 / 4层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-403",
+      "code": "B4-ROOM-403",
+      "name": "403电池室",
+      "location": "西咸4号楼 / 4层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "room-404",
+      "code": "B4-ROOM-404",
+      "name": "404电池室",
+      "location": "西咸4号楼 / 4层",
+      "type": "inspection-target"
+    },
+    {
+      "id": "chiller-1",
+      "code": "B4-CHILLER-1",
+      "name": "1#冷机",
+      "location": "西咸4号楼 / 冷源系统",
+      "type": "inspection-target"
+    },
+    {
+      "id": "chiller-2",
+      "code": "B4-CHILLER-2",
+      "name": "2#冷机",
+      "location": "西咸4号楼 / 冷源系统",
+      "type": "inspection-target"
+    },
+    {
+      "id": "chiller-3",
+      "code": "B4-CHILLER-3",
+      "name": "3#冷机",
+      "location": "西咸4号楼 / 冷源系统",
+      "type": "inspection-target"
+    },
+    {
+      "id": "tower-1",
+      "code": "B4-TOWER-1",
+      "name": "1#冷塔",
+      "location": "西咸4号楼 / 冷却塔区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "tower-2",
+      "code": "B4-TOWER-2",
+      "name": "2#冷塔",
+      "location": "西咸4号楼 / 冷却塔区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "tower-3",
+      "code": "B4-TOWER-3",
+      "name": "3#冷塔",
+      "location": "西咸4号楼 / 冷却塔区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "pump-1",
+      "code": "B4-PUMP-1",
+      "name": "1号冷冻冷却泵",
+      "location": "西咸4号楼 / 循环泵区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "pump-2",
+      "code": "B4-PUMP-2",
+      "name": "2号冷冻冷却泵",
+      "location": "西咸4号楼 / 循环泵区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "pump-3",
+      "code": "B4-PUMP-3",
+      "name": "3号冷冻冷却泵",
+      "location": "西咸4号楼 / 循环泵区",
+      "type": "inspection-target"
+    },
+    {
+      "id": "auxiliary-system",
+      "code": "B4-AUXILIARY-SYSTEM",
+      "name": "冷源辅助设施",
+      "location": "西咸4号楼 / 冷源辅助系统",
+      "type": "inspection-target"
+    },
+    {
+      "id": "ahu-system",
+      "code": "B4-AHU-SYSTEM",
+      "name": "4号楼AHU",
+      "location": "西咸4号楼 / AHU系统（原表未列设备编号）",
+      "type": "inspection-target"
+    }
+  ]
+}

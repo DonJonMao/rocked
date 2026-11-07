@@ -1,0 +1,182 @@
+[
+  {
+    "file": "artifacts/screenshots/1366-01-initial.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "image": {
+      "width": 1366,
+      "height": 1048
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1366-02-missing-photo.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "image": {
+      "width": 1366,
+      "height": 1048
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1366-03-running.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "image": {
+      "width": 1366,
+      "height": 1048
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1366-04-paused-restored.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "image": {
+      "width": 1366,
+      "height": 1048
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1366-05-completed-report.png",
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "image": {
+      "width": 1366,
+      "height": 2912
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1440-01-initial.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "image": {
+      "width": 1440,
+      "height": 1094
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1440-02-missing-photo.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "image": {
+      "width": 1440,
+      "height": 1094
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1440-03-running.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "image": {
+      "width": 1440,
+      "height": 1094
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1440-04-paused-restored.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "image": {
+      "width": 1440,
+      "height": 1094
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1440-05-completed-report.png",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "image": {
+      "width": 1440,
+      "height": 2912
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1920-01-initial.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "image": {
+      "width": 1920,
+      "height": 1149
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1920-02-missing-photo.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "image": {
+      "width": 1920,
+      "height": 1149
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1920-03-running.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "image": {
+      "width": 1920,
+      "height": 1149
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1920-04-paused-restored.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "image": {
+      "width": 1920,
+      "height": 1149
+    },
+    "fullPage": true
+  },
+  {
+    "file": "artifacts/screenshots/1920-05-completed-report.png",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "image": {
+      "width": 1920,
+      "height": 2912
+    },
+    "fullPage": true
+  }
+]

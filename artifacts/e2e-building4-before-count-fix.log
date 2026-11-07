@@ -1,0 +1,78 @@
+
+> wearable-inspection-demo@1.0.0 test:e2e
+> playwright test --max-failures=1
+
+[WebServer] (node:55027) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 31 tests using 1 worker
+
+(node:55029) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：西柴发与日用油箱巡检 (2.4s)
+  ✓   2 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：并机室巡检 (2.0s)
+  ✓   3 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：油库区巡检 (1.6s)
+  ✓   4 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：1层配电室巡检 (2.5s)
+  ✓   5 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：2层电池室巡检 (2.3s)
+  ✓   6 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：3层电池室巡检 (2.3s)
+  ✓   7 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：4层电池室巡检 (2.3s)
+  ✓   8 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：冷水机组巡检 (2.0s)
+  ✓   9 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：冷却塔巡检 (1.8s)
+  ✓  10 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：循环泵巡检 (2.0s)
+  ✓  11 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：冷源辅助设施巡检 (2.0s)
+  ✓  12 [chromium] › tests/e2e/catalog.spec.ts:47:3 › 原表全流程：AHU巡检 (1.9s)
+  ✓  13 [chromium] › tests/e2e/catalog.spec.ts:75:3 › 冷机阈值阻断、留证恢复与报告 1366 (2.7s)
+  ✓  14 [chromium] › tests/e2e/catalog.spec.ts:75:3 › 冷机阈值阻断、留证恢复与报告 1440 (2.7s)
+  ✓  15 [chromium] › tests/e2e/catalog.spec.ts:75:3 › 冷机阈值阻断、留证恢复与报告 1920 (2.8s)
+  ✓  16 [chromium] › tests/e2e/catalog.spec.ts:124:1 › 关机、待机、不涉及可留原因完成；模板选择与编辑保持独立 (2.5s)
+  ✓  17 [chromium] › tests/e2e/inspection.spec.ts:76:3 › 完整流程、异常、暂停恢复与报告 1366×768 (2.4s)
+  ✓  18 [chromium] › tests/e2e/inspection.spec.ts:76:3 › 完整流程、异常、暂停恢复与报告 1440×900 (2.4s)
+  ✓  19 [chromium] › tests/e2e/inspection.spec.ts:76:3 › 完整流程、异常、暂停恢复与报告 1920×1080 (2.5s)
+  ✓  20 [chromium] › tests/e2e/inspection.spec.ts:133:1 › 校验资产、结果和异常说明，删除照片重新阻断，键盘不能跳步 (1.4s)
+  ✓  21 [chromium] › tests/e2e/inspection.spec.ts:183:1 › 上传三种图片、拒绝错误格式/损坏/超限文件，刷新后 Blob 图片可见 (1.6s)
+  ✓  22 [chromium] › tests/e2e/inspection.spec.ts:217:1 › 摄像头拒绝权限后保留替代入口，不重复请求权限 (818ms)
+  ✓  23 [chromium] › tests/e2e/inspection.spec.ts:235:1 › 照片及步骤写入失败不推进，重试后原子保存 (991ms)
+  ✓  24 [chromium] › tests/e2e/inspection.spec.ts:279:1 › 关闭采集后迟到图片不写入新步骤，迟到相机授权释放 tracks (1.0s)
+  ✓  25 [chromium] › tests/e2e/inspection.spec.ts:325:1 › 模拟摄像头拍照成功，保存后停止所有 tracks (709ms)
+  ✓  26 [chromium] › tests/e2e/inspection.spec.ts:354:1 › 模板快照、内部顺序与通用新增检查项，新任务执行新版本 (3.3s)
+  ✓  27 [chromium] › tests/e2e/inspection.spec.ts:406:1 › 报告 JSON、打印、历史只读和多任务隔离 (2.9s)
+  ✘  28 [chromium] › tests/e2e/inspection.spec.ts:462:1 › 重置取消保留数据，连续三轮重置不残留任务图片和事件 (923ms)
+Testing stopped early after 1 maximum allowed failures.
+
+
+  1) [chromium] › tests/e2e/inspection.spec.ts:462:1 › 重置取消保留数据，连续三轮重置不残留任务图片和事件 ───────────────────
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 3
+    Received length: 33
+    Received array:  [{"code": "ASSET-A03", "id": "asset-a03", "location": "示例机房 1 / A 区", "name": "机柜 A03", "type": "cabinet"}, {"code": "ASSET-A04", "id": "asset-a04", "location": "示例机房 1 / A 区", "name": "机柜 A04", "type": "cabinet"}, {"code": "ASSET-B01", "id": "asset-b01", "location": "示例机房 1 / B 区", "name": "机柜 B01", "type": "cabinet"}, {"code": "B4-DIESEL-WEST", "id": "diesel-west", "location": "2号动力中心西柴发区", "name": "2号动力中心西柴发", "type": "inspection-target"}, {"code": "B4-PARALLEL-ROOM", "id": "parallel-room", "location": "2号动力中心", "name": "2号动力中心并机室", "type": "inspection-target"}, {"code": "B4-OIL-DEPOT-1", "id": "oil-depot-1", "location": "1号油库区", "name": "1号油库区", "type": "inspection-target"}, {"code": "B4-ROOM-101", "id": "room-101", "location": "西咸4号楼 / 1层", "name": "101配电室", "type": "inspection-target"}, {"code": "B4-ROOM-102", "id": "room-102", "location": "西咸4号楼 / 1层", "name": "102配电室", "type": "inspection-target"}, {"code": "B4-ROOM-103", "id": "room-103", "location": "西咸4号楼 / 1层", "name": "103配电室", "type": "inspection-target"}, {"code": "B4-ROOM-104", "id": "room-104", "location": "西咸4号楼 / 1层", "name": "104配电室", "type": "inspection-target"}, …]
+
+      480 |     expect(config.template.version).toBe(1);
+      481 |     expect(config.template.steps).toHaveLength(5);
+    > 482 |     expect(config.assets).toHaveLength(3);
+          |                           ^
+      483 |     await page.reload();
+      484 |     await expect(page.getByRole('button', { name: /^下发(?:新)?任务$/ })).toBeEnabled();
+      485 |   }
+        at /Users/mao/projects/inspection-demo/tests/e2e/inspection.spec.ts:482:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/inspection-重置取消保留数据，连续三轮重置不残留任务图片和事件-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/inspection-重置取消保留数据，连续三轮重置不残留任务图片和事件-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/inspection-重置取消保留数据，连续三轮重置不残留任务图片和事件-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/inspection-重置取消保留数据，连续三轮重置不残留任务图片和事件-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tests/e2e/inspection.spec.ts:462:1 › 重置取消保留数据，连续三轮重置不残留任务图片和事件 ────────────────────
+  3 did not run
+  27 passed (57.9s)
+  1 error was not a part of any test, see above for details

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "template-cabinet-inspection",
+  "name": "机柜例行巡检",
+  "version": 1,
+  "description": "固定步骤巡检，逐项采集照片并确认完成。",
+  "steps": [
+    {
+      "id": "verify-asset",
+      "type": "asset_check",
+      "title": "确认巡检设备",
+      "instruction": "扫描设备资产码，核对设备名称和所在位置。",
+      "requirements": {
+        "minPhotos": 0,
+        "resultRequired": false,
+        "abnormalNoteRequired": false,
+        "confirmationRequired": true
+      }
+    },
+    {
+      "id": "check-cabinet",
+      "type": "photo_check",
+      "title": "检查柜门与外观",
+      "instruction": "检查柜门开合状态及外观，拍摄一张能够看清机柜全貌的照片，记录检查结果。",
+      "requirements": {
+        "minPhotos": 1,
+        "resultRequired": true,
+        "abnormalNoteRequired": true,
+        "confirmationRequired": true
+      }
+    },
+    {
+      "id": "check-indicators",
+      "type": "photo_check",
+      "title": "检查设备指示灯",
+      "instruction": "观察设备指示灯，拍摄能够辨认灯色与亮灭状态的近景照片，并记录检查结果。",
+      "requirements": {
+        "minPhotos": 1,
+        "resultRequired": true,
+        "abnormalNoteRequired": true,
+        "confirmationRequired": true
+      }
+    },
+    {
+      "id": "check-panel",
+      "type": "photo_check",
+      "title": "检查控制面板",
+      "instruction": "拍摄清晰的控制面板照片，检查显示状态和告警信息，记录检查结果。",
+      "requirements": {
+        "minPhotos": 1,
+        "resultRequired": true,
+        "abnormalNoteRequired": true,
+        "confirmationRequired": true
+      }
+    },
+    {
+      "id": "submit-report",
+      "type": "review_submit",
+      "title": "提交巡检记录",
+      "instruction": "核对设备信息、各步骤照片及检查结果，确认后提交巡检记录。",
+      "requirements": {
+        "minPhotos": 0,
+        "resultRequired": false,
+        "abnormalNoteRequired": false,
+        "confirmationRequired": true
+      }
+    }
+  ]
+}

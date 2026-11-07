@@ -1,0 +1,27 @@
+# Copy this file to android/local.properties and replace every placeholder
+# before building a field package. Never commit the copied local.properties.
+sdk.dir=/absolute/path/to/Android/sdk
+
+# Rokid Enterprise credentials supplied by the device vendor.
+rokid.appId=
+rokid.appSecret=
+# Must match the client ID registered for the Glass3/phone pair.
+# Leave blank to use the demo default: InspectionGlass.
+rokid.clientId=InspectionGlass
+
+# Optional production report endpoint. It must be HTTPS; leave blank for an
+# offline-only demo. The token is sent as a Bearer token when provided.
+inspection.syncUrl=
+inspection.syncToken=
+
+# Optional: use the package names registered for the enterprise SDK account.
+# android.phoneApplicationId=com.example.inspection.phone
+# android.glassApplicationId=com.example.inspection.glass
+
+# Optional: enterprise Release signing. All four keys must be provided
+# together; storeFile is resolved relative to the android/ project directory
+# unless an absolute path is used. Keep this file free of real passwords.
+# android.signing.storeFile=/absolute/path/to/enterprise-release.jks
+# android.signing.storePassword=
+# android.signing.keyAlias=
+# android.signing.keyPassword=

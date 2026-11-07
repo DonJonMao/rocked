@@ -1,0 +1,12 @@
+{
+  "type": "device.heartbeat",
+  "version": 1,
+  "messageId": "message-heartbeat-0001",
+  "sentAt": "2026-11-06T18:00:00+08:00",
+  "deviceId": "glass-device-001",
+  "payload": {
+    "appVersion": "0.1.0",
+    "connection": "ready",
+    "batteryPercent": 87
+  }
+}

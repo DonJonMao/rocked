@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://inspection-demo.local/protocol/inspection-protocol.v1.json",
+  "title": "智能穿戴巡检协议 v1",
+  "description": "管理端、手机端和 Rokid 眼镜端之间的最小业务消息协议。控制消息可走文本通道，照片等大文件走 P2P 文件通道。",
+  "type": "object",
+  "required": ["type", "version", "messageId", "sentAt", "payload"],
+  "properties": {
+    "type": { "type": "string", "enum": ["task.dispatch", "task.ack", "task.start", "task.pause", "task.resume", "step.draft", "step.complete", "step.ack", "photo.upload", "photo.ack", "task.complete", "device.heartbeat"] },
+    "version": { "const": 1 },
+    "messageId": { "type": "string", "minLength": 1 },
+    "commandId": { "type": "string", "minLength": 1, "description": "task.dispatch 使用 cmd-dispatch-{taskId}；其他消息按各自 commandId 生成器生成" },
+    "taskId": { "type": "string", "minLength": 1 },
+    "sentAt": { "type": "string", "format": "date-time" },
+    "deviceId": { "type": "string", "minLength": 1 },
+    "payload": { "type": "object" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "type": { "const": "task.dispatch" } } },
+      "then": {
+        "required": ["commandId", "taskId"],
+        "properties": {
+          "payload": {
+            "required": ["template", "asset", "assignee", "steps"],
+            "properties": {
+              "template": { "type": "object", "required": ["id", "name", "version"], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "version": { "type": "integer", "minimum": 1 } } },
+              "asset": { "type": "object", "required": ["id", "code", "name", "location"], "properties": { "id": { "type": "string" }, "code": { "type": "string" }, "name": { "type": "string" }, "location": { "type": "string" } } },
+              "assignee": { "type": "object", "required": ["id", "name"], "properties": { "id": { "type": "string" }, "name": { "type": "string" } } },
+              "schedule": {
+                "type": "object",
+                "required": ["date", "timeSlot"],
+                "properties": {
+                  "date": { "type": "string" },
+                  "timeSlot": { "type": "string" },
+                  "shift": { "type": "string" }
+                }
+              },
+              "steps": {
+                "type": "array",
+                "minItems": 3,
+                "items": {
+                  "type": "object",
+                  "required": ["id", "type", "title", "instruction", "requirements"],
+                  "properties": {
+                    "id": { "type": "string", "minLength": 1 },
+                    "type": { "type": "string" },
+                    "title": { "type": "string" },
+                    "instruction": { "type": "string" },
+                    "requirements": {
+                      "type": "object",
+                      "properties": {
+                        "minPhotos": { "type": "integer", "minimum": 0 },
+                        "resultRequired": { "type": "boolean" },
+                        "abnormalNoteRequired": { "type": "boolean" },
+                        "confirmationRequired": { "type": "boolean" }
+                      }
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": ["id", "label", "kind"],
+                        "properties": {
+                          "id": { "type": "string" },
+                          "label": { "type": "string" },
+                          "kind": { "enum": ["number", "select", "text"] },
+                          "unit": { "type": "string" },
+                          "options": { "type": "array", "items": { "type": "string" } },
+                          "expected": { "type": "string" },
+                          "min": { "type": "number" },
+                          "max": { "type": "number" },
+                          "minExclusive": { "type": "boolean" },
+                          "maxExclusive": { "type": "boolean" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "enum": ["step.draft", "step.complete", "step.ack"] } } },
+      "then": {
+        "required": ["commandId", "taskId"],
+        "properties": {
+          "payload": {
+            "required": ["expectedStepId"],
+            "properties": {
+              "expectedStepId": { "type": "string", "minLength": 1 },
+              "revision": { "type": "integer", "minimum": 1 },
+              "result": { "enum": ["normal", "abnormal", "shutdown", "standby", "not_applicable"] },
+              "note": { "type": "string" },
+              "assetCode": { "type": "string" },
+              "confirmed": { "type": "boolean" },
+              "faultTime": { "type": "string" },
+              "completedAt": { "type": "string", "format": "date-time" },
+              "readings": { "type": "object", "additionalProperties": { "type": "string" } },
+              "photoIds": { "type": "array", "items": { "type": "string" } },
+              "accepted": { "type": "boolean" },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "photo.upload" } } },
+      "then": {
+        "required": ["commandId", "taskId"],
+        "properties": {
+          "payload": {
+            "required": ["photoId", "stepId", "fileName", "mimeType", "width", "height"],
+            "properties": {
+              "photoId": { "type": "string", "minLength": 1 },
+              "stepId": { "type": "string", "minLength": 1 },
+              "fileName": { "type": "string" },
+              "mimeType": { "enum": ["image/jpeg", "image/png", "image/webp"] },
+              "width": { "type": "integer", "minimum": 1 },
+              "height": { "type": "integer", "minimum": 1 },
+              "sha256": { "type": "string" },
+              "sizeBytes": { "type": "integer", "minimum": 1 }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "enum": ["task.ack", "photo.ack", "task.complete"] } } },
+      "then": {
+        "required": ["commandId", "taskId"],
+        "properties": {
+          "payload": {
+            "required": ["accepted"],
+            "properties": {
+              "accepted": { "type": "boolean" },
+              "photoId": { "type": "string", "minLength": 1 },
+              "reason": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "type": { "const": "device.heartbeat" } } },
+      "then": {
+        "required": ["deviceId"],
+        "properties": {
+          "payload": {
+            "required": ["appVersion", "connection", "batteryPercent"],
+            "properties": {
+              "appVersion": { "type": "string" },
+              "connection": { "enum": ["disconnected", "bluetooth", "p2p", "ready"] },
+              "batteryPercent": { "type": "integer", "minimum": 0, "maximum": 100 }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

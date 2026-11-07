@@ -1,0 +1,18 @@
+{
+  "type": "task.dispatch",
+  "version": 1,
+  "messageId": "msg-20261105-0001",
+  "commandId": "cmd-dispatch-task-building4-0001",
+  "taskId": "task-building4-0001",
+  "sentAt": "2026-11-05T09:30:00+08:00",
+  "payload": {
+    "template": { "id": "hvac-chiller", "name": "冷机运行巡检", "version": 1 },
+    "asset": { "id": "b4-chiller-1", "code": "B4-CHILLER-1", "name": "1#冷机", "location": "4号楼地下机房" },
+    "assignee": { "id": "assignee-zhang", "name": "张工" },
+    "steps": [
+      { "id": "asset-confirm", "type": "asset_check", "title": "确认巡检设备", "instruction": "核对设备名称、位置和资产码", "requirements": { "minPhotos": 0, "resultRequired": false, "abnormalNoteRequired": false, "confirmationRequired": true } },
+      { "id": "chiller-pressure", "type": "photo_check", "title": "记录冷凝压力", "instruction": "读取仪表并填写冷凝压力，必要时拍照留证", "fields": [{ "id": "condensingPressure", "label": "冷凝压力", "kind": "number", "unit": "kPa", "min": 0, "max": 958 }], "requirements": { "minPhotos": 0, "resultRequired": true, "abnormalNoteRequired": true, "confirmationRequired": true } },
+      { "id": "review-submit", "type": "review_submit", "title": "提交巡检记录", "instruction": "核对本次记录后提交", "requirements": { "minPhotos": 0, "resultRequired": false, "abnormalNoteRequired": false, "confirmationRequired": true } }
+    ]
+  }
+}

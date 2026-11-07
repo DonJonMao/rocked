@@ -1,0 +1,17 @@
+{
+  "type": "step.complete",
+  "version": 1,
+  "messageId": "msg-20261105-0002",
+  "commandId": "cmd-step-0002",
+  "taskId": "task-building4-0001",
+  "sentAt": "2026-11-05T09:35:12+08:00",
+  "payload": {
+    "expectedStepId": "chiller-pressure",
+    "revision": 3,
+    "result": "abnormal",
+    "readings": { "condensingPressure": "958" },
+    "note": "冷凝压力达到上限，待复核",
+    "faultTime": "09:35",
+    "photoIds": ["photo-0001"]
+  }
+}

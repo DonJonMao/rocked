@@ -1,0 +1,11 @@
+{
+  "type": "task.complete",
+  "version": 1,
+  "messageId": "message-task-complete-0001",
+  "commandId": "complete-task-task-building4-20261106-001",
+  "taskId": "task-building4-20261106-001",
+  "sentAt": "2026-11-06T18:00:00+08:00",
+  "payload": {
+    "accepted": true
+  }
+}
